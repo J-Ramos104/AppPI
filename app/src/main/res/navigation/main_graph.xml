@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.exemple.appfog.ui.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment2"
+        android:name="com.exemple.appfog.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_infoFragment2"
+            app:destination="@id/infoFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/infoFragment2"
+        android:name="com.exemple.appfog.ui.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
+
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.exemple.appfog.ui.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment2_to_addFragment"
+            app:destination="@id/addFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_histFragment"
+            app:destination="@id/histFragment" />
+        <action
+            android:id="@+id/action_homeFragment2_to_confFragment"
+            app:destination="@id/confFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/histFragment"
+        android:name="com.exemple.appfog.ui.home.HistFragment"
+        android:label="fragment_hist"
+        tools:layout="@layout/fragment_hist">
+        <action
+            android:id="@+id/action_histFragment_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_histFragment_to_confFragment"
+            app:destination="@id/confFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.exemple.appfog.ui.home.AddFragment"
+        android:label="AddFragment"
+        tools:layout="@layout/fragment_add">
+        <action
+            android:id="@+id/action_addFragment_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/confFragment"
+        android:name="com.exemple.appfog.ui.home.ConfFragment"
+        android:label="fragment_conf"
+        tools:layout="@layout/fragment_conf">
+        <action
+            android:id="@+id/action_confFragment_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_confFragment_to_histFragment"
+            app:destination="@id/histFragment" />
+        <action
+            android:id="@+id/action_confFragment_to_infoFragment2"
+            app:destination="@id/infoFragment2" />
+    </fragment>
+
+</navigation>

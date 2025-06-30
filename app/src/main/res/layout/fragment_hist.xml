@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.home.HistFragment">
+
+    <!-- Linha inferior -->
+    <!-- Linha inferior -->
+    <View
+        android:id="@+id/view2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#FFDEC7"
+        app:layout_constraintBottom_toTopOf="@id/buttonHome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp" />
+
+    <ImageView
+        android:id="@+id/logo_historico"
+        android:layout_width="204dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/l1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/voltar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"
+        android:contentDescription="volta"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/setaesquerda2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/box_bomba"
+        android:layout_width="385dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/quadro_borda"
+        app:layout_constraintEnd_toStartOf="@+id/GUIA_direita"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/GUIA_superior" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_superior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+    <TextView
+        android:id="@+id/text_B"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:text="Casa Principal"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/GUIA_esquerda"
+        app:layout_constraintTop_toTopOf="@+id/box_bomba" />
+
+    <!-- Linha superior -->
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#FFDEC7"
+        app:layout_constraintBottom_toTopOf="@+id/text_historico"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo_historico"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/box_bom"
+        android:layout_width="385dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/quadro_borda"
+        app:layout_constraintBottom_toTopOf="@+id/box_bombaH2O"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_bomba"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <TextView
+        android:id="@+id/text_semanas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Semanas Anteriores"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/box_bom"
+        app:layout_constraintStart_toStartOf="@+id/box_bom"
+        app:layout_constraintTop_toTopOf="@+id/box_bom" />
+
+    <ImageButton
+        android:id="@+id/ib_abrirS"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="@color/white"
+        android:contentDescription="seta para baixo Semana"
+        android:src="@drawable/setaparabaixo"
+        app:layout_constraintEnd_toEndOf="@+id/box_bom"
+        app:layout_constraintTop_toTopOf="@+id/box_bom"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/text_historico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:text="Histórico Semanal"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/GUIA_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/logo_historico" />
+
+    <View
+        android:id="@+id/box_bombaH2O"
+        android:layout_width="385dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="324dp"
+        android:background="@drawable/quadro_borda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GUIA_superior" />
+
+    <TextView
+        android:id="@+id/text_BH20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="16dp"
+        android:text="Bomba de Água"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/box_bombaH2O"
+        app:layout_constraintTop_toTopOf="@+id/box_bombaH2O" />
+
+    <ImageView
+        android:id="@+id/circulo"
+        android:layout_width="47dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:padding="5dp"
+        android:src="@drawable/circulo"
+        app:layout_constraintStart_toStartOf="@+id/box_bombaH2O"
+        app:layout_constraintTop_toBottomOf="@+id/text_BH20"
+        app:tint="@color/laranja" />
+
+
+    <ImageView
+        android:id="@+id/gotao"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/gotao"
+        app:layout_constraintStart_toStartOf="@+id/circulo"
+        app:layout_constraintTop_toTopOf="@+id/circulo"
+        app:tint="@color/light_orange" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="16dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/gotinha"
+        app:layout_constraintEnd_toEndOf="@+id/circulo"
+        app:layout_constraintTop_toTopOf="@id/circulo"
+        app:tint="@color/white" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estado:"
+        android:textColor="@color/black"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toEndOf="@+id/circulo"
+        app:layout_constraintTop_toTopOf="@+id/box_bombaH2O" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Funcionamento:"
+        android:textColor="@color/black"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/box_bombaH2O"
+        app:layout_constraintStart_toEndOf="@+id/circulo" />
+
+    <View
+        android:id="@+id/linha_inferior"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bege"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="650dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_inferior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.89" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_esquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+
+    <View
+        android:id="@+id/box_bomb"
+        android:layout_width="385dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/quadro_borda"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box_bombaH2O" />
+
+    <TextView
+        android:id="@+id/text_casaPrincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:text="Casa Principal"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/box_bomb"
+        app:layout_constraintTop_toTopOf="@+id/box_bomb" />
+
+    <ImageButton
+        android:id="@+id/ib_abrir"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/setaparabaixo"
+        android:contentDescription="seta para baixo"
+        app:layout_constraintEnd_toStartOf="@+id/GUIA_direita"
+        app:layout_constraintTop_toTopOf="@+id/box_bomb"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/buttonHome"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:contentDescription="home"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="@color/gray" />
+
+    <ImageButton
+        android:id="@+id/buttonHist"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:contentDescription="historico"
+        android:src="@drawable/historico"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonConf"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonHome"
+        app:tint="@color/gray" />
+
+    <ImageButton
+        android:id="@+id/buttonConf"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/white"
+        android:contentDescription="configuração"
+        android:src="@drawable/configuracao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/gray" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.info.InfoFragment"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo_sobre"
+        android:layout_width="200dp"
+        android:layout_height="90dp"
+        android:src="@drawable/l1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GUIA_superior"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <View
+        android:id="@+id/linha_superior"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bege"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp" />
+
+    <ImageButton
+        android:id="@+id/voltar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="12dp"
+        android:contentDescription="volta"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/setaesquerda3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/icon_info"
+        android:layout_width="82dp"
+        android:layout_height="76dp"
+        android:src="@drawable/sobre2"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/GUIA_superior" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:text="Sobre"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/icon_info"
+        app:layout_constraintTop_toTopOf="@+id/GUIA_superior" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:text="O FogAlert é uma solução tecnológica desenvolvida pela
+                      empresa Ladies In Fuga, voltada para o cadastramento e
+                      monitoramento de residências equipadas com sistemas de
+                      detecção de incêndios."
+        android:textColor="@color/black"
+        android:justificationMode="inter_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="O aplicativo oferece uma plataforma eficiente, segura e
+                      de fácil utilização, que visa fortalecer a prevenção de sinistros, promovendo maior segurança patrimonial e proteção à vida."
+        android:textColor="@color/black"
+        android:justificationMode="inter_word"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:justificationMode="inter_word"
+        android:text="Para realizar o cadastramento de uma residência, o
+usuário deverá, primeiramente, efetuar o registro de uma
+conta na plataforma FogAlert. Após a autenticação,
+deve-se acessar a funcionalidade ‘Adicionar Casa’,
+disponível no menu principal. Na sequência, é necessário
+preencher os campos obrigatórios com as informações
+solicitadas referentes ao imóvel."
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:justificationMode="inter_word"
+        android:text="Concluída essa etapa,
+    a unidade cadastrada estará apta para ser monitorada por
+    meio do sistema, permitindo o acompanhamento em
+    tempo real dos dispositivos de detecção de incêndio
+    vinculados."
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:justificationMode="inter_word"
+        android:text="Para esclarecimento de dúvidas, orientações
+operacionais ou suporte técnico, os usuários poderão
+entrar em contato com a Central de Atendimento LIF,
+disponível por meio do telefone (27) 2006-2025 ou pelo
+e-mail &quot;ladiesinfugaltda@gmail.com&quot;. "
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="373dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:justificationMode="inter_word"
+        android:text="&quot;Onde há risco, há uma solução. Onde há Ladies In Fuga, há segurança.&quot;"
+        android:textColor="@color/black"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

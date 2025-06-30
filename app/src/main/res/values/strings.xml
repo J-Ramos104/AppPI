@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AppFog</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Status  -->
+
+    <string name="hit_edit_email">Digite seu e-mail</string>
+    <string name="hit_edit_password">Digite sua senha</string>
+
+
+    <!-- Generics -->
+    <string name="text_title_warning">Atenção</string>
+    <string name="text_button_warning">Entendi</string>
+    <string name="password_empty">Preencha a senha!</string>
+    <string name="password_text">Senha</string>
+    <string name="email_empty">Preencha seu e-mail!</string>
+    <string name="email_text">E-mail</string>
+    <string name="message_text">Message</string>
+
+    <!-- Add casa-->
+    <string name="nome_casa_empty">Por favor, informe o nome da casa.</string>
+    <string name="endereco_empty">Por favor, informe o endereço da casa.</string>
+    <string name="sensor_id_empty">Por favor, informe o ID do sensor.</string>
+
+
+
+</resources>
