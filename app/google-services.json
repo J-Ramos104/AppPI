@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "904508623593",
+    "firebase_url": "https://projeto-integrador-if-default-rtdb.firebaseio.com",
+    "project_id": "projeto-integrador-if",
+    "storage_bucket": "projeto-integrador-if.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:904508623593:android:893f1753ffedb11a733e78",
+        "android_client_info": {
+          "package_name": "com.example.fogalert"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWr80_YlGhMTIMwAb7wipN-XgciyYEx04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,7 +1,10 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
+    id("com.android.application")
+    id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.android") // versão direta do plugin Kotlin
 }
+
+
 
 android {
     namespace = "com.exemple.appfog"
@@ -39,6 +42,10 @@ android {
 }
 
 dependencies {
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:33.16.0"))
+    //Biblioteca de autenticação do firebase
+    implementation("com.google.firebase:firebase-auth-ktx")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

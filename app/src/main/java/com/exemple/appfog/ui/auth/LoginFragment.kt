@@ -10,6 +10,7 @@ import com.exemple.appfog.R
 import com.exemple.appfog.databinding.FragmentHomeBinding
 import com.exemple.appfog.databinding.FragmentLoginBinding
 import com.exemple.appfog.util.showBottomSheet
+import com.google.firebase.auth.FirebaseAuth
 import kotlin.toString
 
 
@@ -17,6 +18,7 @@ class LoginFragment : Fragment() {
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
+    private lateinit var auth:FirebaseAuth
 
 
 
@@ -30,6 +32,7 @@ class LoginFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        auth = FirebaseAuth.getInstance()
         initListener()
     }
 
@@ -42,20 +45,36 @@ class LoginFragment : Fragment() {
             findNavController().navigate(R.id.action_loginFragment2_to_infoFragment2)
         }
     }
-    private fun validateData(){
+    private fun validateData() {
         val email = binding.EDEmail.text.toString().trim()
         val senha = binding.EDSenha.text.toString().trim()
-        if (email.isNotBlank()){
-            if (senha.isNotBlank()){
-                findNavController().navigate(R.id.action_loginFragment2_to_homeFragment2)
-            }else{
+
+        if (email.isNotBlank()) {
+            if (senha.isNotBlank()) {
+                loginUser(email, senha)
+            } else {
                 showBottomSheet(message = getString(R.string.password_empty))
             }
-        }else{
+        } else {
             showBottomSheet(message = getString(R.string.email_empty))
-
         }
     }
+
+    private fun loginUser(email: String, senha: String) {
+        auth.signInWithEmailAndPassword(email, senha)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    // Login deu certo, navega para a próxima tela
+                    findNavController().navigate(R.id.action_loginFragment2_to_homeFragment2)
+                } else {
+                    // Login falhou
+                    showBottomSheet(message = getString(R.string.login_failed))
+
+                }
+            }
+    }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
