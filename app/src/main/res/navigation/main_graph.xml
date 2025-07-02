@@ -96,6 +96,10 @@
         android:id="@+id/registerFragment"
         android:name="com.exemple.appfog.ui.auth.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
 
 </navigation>
