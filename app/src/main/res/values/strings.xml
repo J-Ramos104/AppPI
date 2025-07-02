@@ -16,6 +16,8 @@
     <string name="password_text">Senha</string>
     <string name="email_empty">Preencha seu e-mail!</string>
     <string name="email_text">E-mail</string>
+    <string name="usuario_empty">Preencha seu nome!</string>
+    <string name="confirm_senha_empty">Confirme sua senha!</string>
     <string name="message_text">Message</string>
 
     <!-- Add casa-->
@@ -23,7 +25,6 @@
     <string name="endereco_empty">Por favor, informe o endereço da casa.</string>
     <string name="sensor_id_empty">Por favor, informe o ID do sensor.</string>
     <string name="login_failed">Falha no login. Verifique o e-mail e a senha.</string>
-
 
 
 </resources>

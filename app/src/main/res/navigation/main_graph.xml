@@ -26,6 +26,9 @@
         <action
             android:id="@+id/action_loginFragment2_to_infoFragment2"
             app:destination="@id/infoFragment2" />
+        <action
+            android:id="@+id/action_loginFragment2_to_registerFragment"
+            app:destination="@id/registerFragment" />
     </fragment>
 
     <fragment
@@ -89,5 +92,10 @@
             android:id="@+id/action_confFragment_to_infoFragment2"
             app:destination="@id/infoFragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.exemple.appfog.ui.auth.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 
 </navigation>

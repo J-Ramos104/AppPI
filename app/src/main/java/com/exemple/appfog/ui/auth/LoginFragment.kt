@@ -44,6 +44,10 @@ class LoginFragment : Fragment() {
         binding.imageButton4.setOnClickListener {
             findNavController().navigate(R.id.action_loginFragment2_to_infoFragment2)
         }
+
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_loginFragment2_to_registerFragment)
+        }
     }
     private fun validateData() {
         val email = binding.EDEmail.text.toString().trim()
