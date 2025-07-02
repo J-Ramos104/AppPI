@@ -1,14 +1,23 @@
 package com.exemple.appfog.util
 
+import android.app.Activity
 import android.view.LayoutInflater
 import android.widget.ImageButton
 import androidx.fragment.app.Fragment
 import com.exemple.appfog.databinding.BottomSheetBinding
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.exemple.appfog.R
+import com.exemple.appfog.ui.auth.RegisterFragment
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.button.MaterialButton
 
 
 fun ImageButton.setBackAction(fragment: Fragment) {
+    this.setOnClickListener {
+        fragment.requireActivity().onBackPressedDispatcher.onBackPressed()
+    }
+}
+fun MaterialButton.setBackAction(fragment: Fragment) {
     this.setOnClickListener {
         fragment.requireActivity().onBackPressedDispatcher.onBackPressed()
     }
